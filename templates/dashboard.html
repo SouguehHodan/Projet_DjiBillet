@@ -1,0 +1,223 @@
+{% extends 'base_admin.html' %}
+
+{%block content%}
+    <!--partie principale-->
+    <div>
+      <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item text-dark"><a href="/">Acceuil Principale</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+   <div class="cardBox">
+    <div class="card">
+      <div>
+        <div class="number">1?88</div>
+        <div class="cardName">Events disponoble</div>
+      </div>
+      <div class="filter">
+        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-filter text-dark"></i></a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+          <li class="dropdown-header text-start">
+            <h6>Filter</h6>
+          </li>
+
+          <li><a class="dropdown-item" href="#">Aujord'huis</a></li>
+          <li><a class="dropdown-item" href="#">un mois</a></li>
+          <li><a class="dropdown-item" href="#">une Annèe</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div>
+        <div class="number">1?88</div>
+        <div class="cardName">Events reserve</div>
+      </div> 
+      <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-filter text-dark"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+                        <h6>Filter</h6>
+                      </li>
+
+                      <li><a class="dropdown-item" href="#">Aujord'huis</a></li>
+                      <li><a class="dropdown-item" href="#">un mois</a></li>
+                      <li><a class="dropdown-item" href="#">une Annèe</a></li>
+                    </ul>
+          </div>
+    </div>
+    <div class="card">
+      <div>
+        <div class="number">1?88</div>
+        <div class="cardName">Events rejete</div>
+      </div>
+      <!-- <div class="iconBx"> -->
+        <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-filter text-dark"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+                        <h6>Filter</h6>
+                      </li>
+
+                      <li><a class="dropdown-item" href="#">Aujord'huis</a></li>
+                      <li><a class="dropdown-item" href="#">un mois</a></li>
+                      <li><a class="dropdown-item" href="#">une Annèe</a></li>
+                    </ul>
+          </div>
+      <!-- </div> -->
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="number">1?88</div>
+        <div class="cardName">Events en cour</div>
+      </div>
+      <!-- <div class="iconBx"> -->
+        <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-filter text-dark"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+                        <h6>Filter</h6>
+                      </li>
+
+                      <li><a class="dropdown-item" href="#">Aujord'huis</a></li>
+                      <li><a class="dropdown-item" href="#">un mois</a></li>
+                      <li><a class="dropdown-item" href="#">une Annèe</a></li>
+                    </ul>
+          </div>
+      <!-- </div> -->
+    </div>
+
+   </div>
+ 
+
+
+  <div class="detail">
+     <!--  detail list  -->
+    <div class="recentorder">
+      <div class="cardheader">
+        <h2>Recent Order</h2>
+
+        <table class="table align-middle mb-0 bg-white" id="table1">
+          <thead class="bg-light">
+            <tr>
+              <th># :</th>
+              <th>Name :</th>
+              <th>Type :</th>
+              <th>Dates :</th>
+              <th>Adress :</th>
+              <th>Prix :</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for event in vafid %}
+            <tr>
+              <td>{{event.id}}</td>
+              <td>{{event.nameE}}</td>
+              <td>{{event.type}}</td>
+              <td>{{event.dates}}</td>
+              <td>{{event.adress}}</td>
+              <td>{{event.prix}}</td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="recentcustomer">
+      <div class="cardheader">
+        <div class="col-lg-4">
+
+          <div class="pagetitle6">
+            <h3>l'evenement recent</h3>
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Aujord'huis</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="bg-white shadow text-muted p-5 rounded" id="bg-white">
+            {% for blog in dernierBlog %}
+            <h3>{{blog.title}}</h3>
+            {{blog.body}} <br>
+            <span>Auteur :</span> <b>{{blog.Nom}}</b> <br>
+            <small class="text-body-secondary"> Date:{{blog.date_pub}}</small>
+            {%endfor%}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="detail_2">
+    <!--  detail list  -->
+   <div class="recentorder_2">
+     <div class="cardheader">
+       <h2>Recent Order</h2>
+
+       <table class="table align-middle mb-0 bg-white" id="table1">
+        <thead class="bg-light">
+          <tr>
+            <th># :</th>
+            <th>Name :</th>
+            <th>Type :</th>
+            <th>Dates :</th>
+            <th>Adress :</th>
+            <th>Prix :</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for event in vafid %}
+          <tr>
+            <td>{{event.id}}</td>
+            <td>{{event.nameE}}</td>
+            <td>{{event.type}}</td>
+            <td>{{event.dates}}</td>
+            <td>{{event.adress}}</td>
+            <td>{{event.prix}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+
+     </div>
+   </div>
+
+   <div class="recentcustomer">
+     <div class="cardheader">
+       <div class="col-lg-4">
+
+         <div class="pagetitle6">
+           <h3>l'evenement recent</h3>
+           <nav>
+             <ol class="breadcrumb">
+               <li class="breadcrumb-item active">Aujord'huis</li>
+             </ol>
+           </nav>
+         </div>
+         <div class="bg-white shadow text-muted p-5 rounded" id="bg-white">
+           {% for blog in dernierBlog %}
+           <h3>{{blog.title}}</h3>
+           {{blog.body}} <br>
+           <span>Auteur :</span> <b>{{blog.Nom}}</b> <br>
+           <small class="text-body-secondary"> Date:{{blog.date_pub}}</small>
+           {%endfor%}
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+ </div>
+
+
+{%endblock%}

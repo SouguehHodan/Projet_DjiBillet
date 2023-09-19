@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="static/fontawesome-free-6.3.0-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <!--partie en tete-->
+    <header>
+
+    <!--partie principale-->
+    <div class="row mt-6 mx-5" id="gradient-custom">
+      <div class="col-md-3">
+        <div style="margin-top: 80px; margin-left: 10px;" class="text-center">
+          <i class="fas fa-cubes fa-2x me-2" style="color: #19ff3f;"></i>
+          <span class="h2 fw-bold mb-0 text-light">DJIB-billet</span>
+          <h3 class="mt-3 text-white">Welcome</h3>
+          <p class="white-text">You are 30 seconds away from compleating your order!</p>
+        </div>
+        <div class="text-center">
+          <a href="/Propos" class="btn btn-light btn-rounded back-button mx-3" role="button">Go back</a>
+        </div>
+      </div>
+      <div class="col-md-9 justify-content-center mt-5" id="form_app">
+        <div class="card card-custom pb-4" id="card-custom">
+          <div class="card-body mt-0 mx-5" id="card-body">
+            <div class="text-center mb-3 pb-2 mt-3">
+              <h4 style="color: #495057 ;">Delivery Details</h4>
+            </div>
+    
+            <form action="/App_Event" method="POST" enctype="multipart/form-data">
+    
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example1">Name Event</label>
+                    <input type="text" for="form9Example1" class="form-control input-custom" name="nameE"/>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example2">Type name</label>
+                    <input type="text" for="form9Example2" class="form-control input-custom" name="type"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example3">Dates time</label>
+                    <input type="datetime" for="form9Example3" class="form-control input-custom" name="dates"/>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example4">Adresse</label>
+                    <input type="text" for="form9Example4" class="form-control input-custom" name="adress"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example6">Prix</label>
+                    <input type="number" for="form9Example6" class="form-control input-custom" name="prix"/>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" id="form9Example6">Nombre de place</label>
+                    <input type="number" for="form9Example6" class="form-control input-custom" name="nbrs"/>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row mb-2">
+                <div class="col">
+                  <div class="form-outline">
+                    <div class="input-group mb-3">
+                      <label class="form-label" id="form9Example6" role="button"></label>
+                      <input type="file" accept="image/*" class="form-control-file" for="formControlFile1" name="image">
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="float-end ">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-success btn-rounded">Add Event</button>
+              </div>
+    
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!--script bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

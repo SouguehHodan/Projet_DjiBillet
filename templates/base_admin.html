@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/fontawesome-free-6.3.0-web/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/style2.css">
+  <title>Document</title>
+</head>
+<body>
+<header id="body_admin">
+    <div class="container_admin">
+      <div class="navigation_admin">
+        <ul>
+          <li>
+            <div class="d-flex align-items-center mb-3 pb-1 mt-3 mx-3">
+              <i class="fas fa-cubes fa-2x me-1" style="color: #19ff3f;"></i>
+              <span class="h5 fw-bold mb-0 text-light">DJIB-billet</span>
+            </div>
+          </li>
+          <li>
+            <a href="/Admin">
+              <span class="icon"> <i class="fa-solid fa-table-columns text-dark"></i></span>
+              <span class="title text-dark">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Event_admin">
+              <span class="icon"><i class="fa-solid fa-calendar text-dark"></i></span>
+              <span class="title text-dark">Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="/User_admin">
+              <span class="icon"><i class="fa-solid fa-user text-dark"></i></span>
+              <span class="title text-dark">User</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Aid">
+              <span class="icon"><i class="fa-solid fa-circle-info text-dark"></i></span>
+              <span class="title text-dark">Aid</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span class="icon"><i class="fa-solid fa-right-from-bracket text-dark"></i></span>
+              <span class="title text-dark">logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+          <!-- main -->
+          <div class="main">
+            <div class="topbar">
+              <div class="toggle">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <!-- search -->
+              <div class="search">
+                <label for="">
+                  <input type="text" placeholder="search here" autofocus>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+              </div>
+              <!-- usertag -->
+              <!-- <div class="user"> -->
+                <nav class="header-nav ms-auto mt-3">
+                  <ul class="d-flex align-items-center">
+                      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="{{ url_for('static', filename='assets/img/profile-img.jpg')}} " height="30" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">ALI FARAH</span>
+                      </a>
+                      <div class="dropdown">
+                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                          <li class="dropdown-header">
+                            <h6>ALI FARAH</h6>
+                            <span>Aministrateur</span>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Profile_admin">
+                              <i class="fa-regular fa-user mx-2"></i>
+                              My profile
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Setting">
+                              <i class="fa-solid fa-gears mx-2"></i>
+                              Setting
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/">
+                              <i class="fa-solid fa-right-from-bracket mx-2"></i>
+                              Logout
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    
+                  </ul>
+                </nav>
+              <!-- </div> -->    
+
+              {%block content %}          
+          
+          
+            {%endblock%}
+
+            </div>
+          </div>
+
+
+          <footer class="bg-light text-center text-lg-start" id="footer_admin">
+            <!-- Copyright -->
+            <div class="text-center p-4">
+              <span class="mx-5 text-center text-success">© 2020 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">DJIB-billet.com</a>
+              </span>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="../static/scrip2.js"></script>
+</body>
+</html>

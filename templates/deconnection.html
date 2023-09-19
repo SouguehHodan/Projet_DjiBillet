@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<table class="table align-middle mb-0 bg-white" id="table1">
+    <thead class="bg-light">
+      <tr>
+        <th># :</th>
+        <th>Emaim :</th>
+        <th>Password :</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for event in vafid %}
+      <tr>
+        <td>{{event.id}}</td>
+        <td>{{event.email}}</td>
+        <td>{{event.password}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+{%endblock%}
